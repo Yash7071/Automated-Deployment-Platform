@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-PaaS | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper" id="dashboard-container">
+    
+    <nav class="navbar">
+        <h2><span id="welcome-message">Loading Environment...</span></h2>
+        <button class="logout-btn" id="logout-btn">Terminate Session</button>
+    </nav>
+
+    <div class="grid">
+        <div class="card">
+            <h2 style="text-align: left; font-size: 1.25rem;">Deploy New Service</h2>
+            <p class="subtitle" style="text-align: left;">Enter a public GitHub repository URL.</p>
+            
+            <form id="deploy-form">
+                <div class="form-group">
+                    <label>Git Repository URL</label>
+                    <input type="text" id="repo-url" placeholder="https://github.com/username/project.git" required>
+                </div>
+                <button type="submit" id="deploy-btn">Deploy Container</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2 style="text-align: left; font-size: 1.25rem;">Build & Cluster Logs</h2>
+            <div class="terminal" id="terminal-output">
+                > System initialized.<br>
+                > Awaiting deployment commands...<br>
+            </div>
+        </div>
+        <div class="card">
+    <h2 style="text-align: left; font-size: 1.25rem;">Active Services</h2>
+    <ul id="services-list" style="list-style: none; padding: 0; margin-top: 15px; max-height: 300px; overflow-y: auto;">
+        <li style="color: #94a3b8;">Scanning for active environments...</li>
+    </ul>
+</div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

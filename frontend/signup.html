@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-PaaS | Request Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+    <div class="card auth-card">
+        <h2>Request Access</h2>
+        <p class="subtitle">Create an account to deploy infrastructure.</p>
+        
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" placeholder="developer_name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email Address</label>
+                <input type="email" id="signup-email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit" id="signup-submit-btn">
+                <span id="signup-btn-text">Create Account</span>
+            </button>
+        </form>
+        
+        <div id="signup-error-message"></div>
+        
+        <div class="switch-page">
+            Already have an access token? <a href="index.html">Log in here</a>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
